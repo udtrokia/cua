@@ -6,8 +6,8 @@ simple scaffold of create umi app....
 `yarn global add cua`
 
 #### Help
-`yarn clone help`
+`$ cua`
 
 #### Usage
-`yarn clone <template>`
+`$ cua <template>`
 
