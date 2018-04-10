@@ -1,0 +1,15 @@
+{
+  "name": "cua",
+  "version": "0.0.1",
+  "description": "a simple scaffold of umi 🤭",
+  "main": "cua",
+  "repository": "git@github.com:udtrokia/cua.git",
+  "author": "udtrokia <udtrokia@163.com>",
+  "license": "MIT",
+	"scripts": {
+		"clone": "cross-env ./cua.sh"
+	},
+  "devDependencies": {
+    "cross-env": "^5.1.4"
+  }
+}
