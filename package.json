@@ -1,8 +1,9 @@
 {
   "name": "cua",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a simple scaffold of umi 🤭",
   "main": "cua",
+	"bin":"cua",
   "repository": "git@github.com:udtrokia/cua.git",
   "author": "udtrokia <udtrokia@163.com>",
   "license": "MIT",

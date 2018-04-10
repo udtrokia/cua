@@ -1,5 +1,4 @@
 #!/bin/bash                                                                                                  
-
 # get command                                                                                                
 cmd="$1"
 
@@ -21,9 +20,9 @@ if [[ "${arr[@]}" =~ $cmd ]];then
     # install modules                                                                                        
     ( yarn ) 2> /dev/null || npm install
 else
-    echo "                                                                                                   
-need to pick a template in                                                                                   
-" &&
-        echo "${arr[*]}                                                                                      
-"
+    echo -e "\nUsage: cua <template>\n\nneed to pick a\033[36m template \033[0min:\n" 
+		for i in ${arr[@]};do
+				echo "  $i"
+		done
+		echo ""
 fi
