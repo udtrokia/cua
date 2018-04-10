@@ -2,11 +2,12 @@
 
 simple scaffold of create umi app....
 
+#### Install
+`yarn global add cua`
+
 #### Help
-yarn: `yarn clone help`
-npm: `npm clone help`
+`yarn clone help`
 
 #### Usage
-yarn: `yarn clone <template>`
-npm: `npm clone <template>`
+`yarn clone <template>`
 
