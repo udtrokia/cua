@@ -1,23 +1,24 @@
-#!/bin/bash                                                                                                  
-# get command                                                                                                
+#!/bin/bash
+
+# get command
 cmd="$1"
 
-# template list                                                                                              
+# template list
 arr=("eleme-demo" "func-test" "routes-via-config" "simple" "ts" "user-dashboard" "with-dva" "with-redux")
 
 # if template in list                                                                                        
-if [[ "${arr[@]}" =~ $cmd ]];then
-    # pull the dir we want                                                                                   
+if echo "${arr[@]}" | grep -w $cmd &>/dev/null;then
+    # pull the dir we want
     mkdir $cmd && cd `pwd`/$cmd && git init &&
         git remote add repo https://github.com/umijs/umi.git
 
     git config core.sparsecheckout true &&
         echo "/examples/$cmd" >> .git/info/sparse-checkout && git pull repo master
 
-    # clean dir                                                                                              
+    # clean dir
     mv `pwd`/examples/$cmd/* . && rm -rf examples
 
-    # install modules                                                                                        
+    # install modules
     ( yarn ) 2> /dev/null || npm install
 else
     echo -e "\nUsage: cua <template>\n\nneed to pick a\033[36m template \033[0min:\n" 
