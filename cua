@@ -7,7 +7,8 @@ cmd="$1"
 arr=("eleme-demo" "func-test" "routes-via-config" "simple" "ts" "user-dashboard" "with-dva" "with-redux")
 
 # if template in list                                                                                        
-if echo "${arr[@]}" | grep -w $cmd &>/dev/null;then
+if echo "${arr[@]}" | grep -w $cmd &> /dev/null;
+then
     # pull the dir we want
     mkdir $cmd && cd `pwd`/$cmd && git init &&
         git remote add repo https://github.com/umijs/umi.git
@@ -22,7 +23,8 @@ if echo "${arr[@]}" | grep -w $cmd &>/dev/null;then
     ( yarn ) 2> /dev/null || npm install
 else
     echo -e "\nUsage: cua <template>\n\nneed to pick a\033[36m template \033[0min:\n" 
-		for i in ${arr[@]};do
+		for i in ${arr[@]};
+		do
 				echo "  $i"
 		done
 		echo ""
